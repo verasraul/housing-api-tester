@@ -11,7 +11,6 @@ export default function GifList(props){
 
 
 
-
     return (
       // <div className="inner"> 
       <div className="posts">

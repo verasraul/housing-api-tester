@@ -38,14 +38,7 @@ export default function SearchResults(props){
 
         //  grab value from event
         const gifValue = event.target.value;
-        // setGifSearch((_prevState) =>{
-        //     remove gifs that don't contain the filter value
-        //     const filteredGifList = props.gifs.filter((image) => {
-        //     return image.toLowerCase().includes(gifValue.toLowerCase());
-        //     });
-        // return filteredGifList
-        // return gifValue
-        // })
+    
 
         fetchData(gifValue);
         // console.log('THIS IS fetchData= ' + fetchData('dog'));

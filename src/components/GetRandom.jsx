@@ -14,12 +14,6 @@ export default function RandomGif(){
         }
       }
 
-    //   setGifs((_prevState) =>{
-    //     //remove fruits that don't contain the filter value
-    //     const previousImg = fetchData();
-    // return previousImg;
-    // })
-
     console.log(fetchData);
     useEffect(() => {
       fetchData();
