@@ -33,11 +33,7 @@ button:active {
   border-bottom-width: 3px;
   border-bottom-color: #1a237e;
 }
-input{
-    margin-left: 45%;
-    /* align-items : center; */
-    padding-top: 1%;
-}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -65,6 +61,23 @@ input{
 .home strong {
   text-decoration: underline;
 }
+
+.search-section{
+  padding: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid white; */
+}
+label {
+  margin-left: 30%;
+  align-items : center;
+  /* border: 1px solid white; */
+
+}
+/* input{
+    margin-bottom: 5%;
+} */
 
 .flip-card {
   perspective: 10000px; /* Remove this if you don't want the 3D effect */
@@ -114,6 +127,7 @@ input{
   }
 }
 
+ 
 .post {
   display: flex;
   justify-content: center;
@@ -169,7 +183,7 @@ input{
 
 .posts {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
   margin: 10% auto 0 auto;
   flex-wrap: wrap;

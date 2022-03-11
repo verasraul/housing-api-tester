@@ -52,7 +52,8 @@ export default function SearchResults(props){
 
     
     return (
-        <div><h1>This is the Search-Gif Section</h1>
+        <div>
+          <h1 className="search-section">This is the Search-Gif Section</h1>
         <SearchGifs onClick={handleGifChange} onChange={(e) => handleGifChange(e)} />
         <br></br>
         <GifList gifs={gifSearch} />

@@ -15,7 +15,7 @@ const getImgUrl = props.gifs.map((item) => {
     console.log('paramsIdID=', image_id)
     // console.log('item.images=', item.images.downsized_medium.url)
     return (
-      item.images.downsized_medium.url
+      <img src={item.images.downsized_medium.url} />
     )
   }
 })
@@ -27,12 +27,12 @@ console.log(getImgUrl)
   return (
     <div className="post">
       <div className="hero">
+      <h1>POP-UP TESTER!!!</h1>
         {/* { image_id.image_id } */}
       {/* {image_id.gifys.images.downsized_medium.url} */}
-      {/* <img src={ getImgUrl } /> */}
+      { getImgUrl }
       {/* {getImgUrl} */}
-      <h1>JUST SOMETHNING</h1>
-          {/* <h1>{matchById()}</h1> */}
+          {/* {matchById()} */}
       </div>
 
       {/* <div className="content">

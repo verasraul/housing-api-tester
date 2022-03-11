@@ -22,14 +22,14 @@ export default function RandomGif(){
     
 
     return(
-          <div>
+          <div onMouseLeave= { fetchData }>
           <img src={ gifs } />
           <br></br>
       
 
-          <button onClick= {fetchData}>
+          {/* <button onClick= {fetchData}>
             Generate Gif
-          </button>
+          </button> */}
         </div>
     )
 }
