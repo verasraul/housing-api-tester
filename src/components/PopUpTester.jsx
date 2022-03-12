@@ -25,9 +25,15 @@ console.log(getImgUrl)
 
 
   return (
+    
     <div className="post">
+    
+        <input type="checkbox" id="exit" />
       <div className="hero">
-      <h1>POP-UP TESTER!!!</h1>
+      <label for='exit'><span class="close">&times;</span></label>
+      
+        
+      {/* <h1>POP-UP TESTER!!!</h1> */}
         {/* { image_id.image_id } */}
       {/* {image_id.gifys.images.downsized_medium.url} */}
       { getImgUrl }

@@ -2,9 +2,6 @@ import './App.css';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import SearchResults from './components/SearchResults';
-import { Search } from './services/Constants';
-import SearchGifs from './components/SearchGifs';
-import GifList from './components/GifList';
 import PopUpTester from './components/PopUpTester';
 import NoMatch from './components/NoMatch';
 
