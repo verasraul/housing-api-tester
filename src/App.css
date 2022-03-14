@@ -128,7 +128,7 @@ label {
 }
 
  
-.post {
+/* .post {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -137,24 +137,65 @@ label {
   width: 80%;
   margin: 1em auto;
   background: #eeeeee;
-}
+} */
 .post img {
   margin: auto;
-  max-height: 600px;
-  width: 100%;
-  opacity: 0.8;
-  border-radius: 4px 4px 0 0;
+  display: block;
+  width: 80%;
+  max-width: 700px;
 }
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+/* check box */
+#exit{
+  display: none;
+
+}
+
+.post #exit:checked~.hero{
+  display: block;
+
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 .posts .post img {
   border-radius: 4px 4px 0 0;
   width: 100%;
   max-height: 600px;
 }
 .hero {
-  border-radius: 4px 4px 0 0;
-  height: 40%;
-  width: 100%;
-  flex: 1;
+   display: none; /*Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 .content {
   flex-basis: auto;

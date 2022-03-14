@@ -56,8 +56,9 @@ export default function SearchResults(props){
           <h1 className="search-section">This is the Search-Gif Section</h1>
         <SearchGifs onClick={handleGifChange} onChange={(e) => handleGifChange(e)} />
         <br></br>
-        <GifList gifs={gifSearch} />
         <PopUpTester gifs={gifSearch} />
+        <GifList gifs={gifSearch} />
+       
         {/* <PopUpTester image={gifSearch} /> */}
         </div>
 

@@ -19,7 +19,7 @@ export default function GifList(props){
               <div className="item">
                 <img src={image.images.downsized_medium.url} />
                   <div className="modal">
-                    <button onClick={() => navigate(`/search/${image.id}`)}> info </button>
+                   <button onClick={() => navigate(`/search/${image.id}`)}><label for='exit'>  info </label></button>
                   </div>
               </div>
               )}
