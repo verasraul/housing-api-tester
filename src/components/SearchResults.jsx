@@ -6,7 +6,6 @@ import PopUpTester from "./PopUpTester";
 
 
 
-
 export default function SearchResults(props){
     // inittialize the image list to the full list passed in props
     const [gifSearch, setGifSearch] = useState([])
@@ -52,11 +51,12 @@ export default function SearchResults(props){
 
     
     return (
+      // <Search> <InputBase placeholder="search" />    </Search>
         <div>
-          <h1 className="search-section">This is the Search-Gif Section</h1>
+          <h1 className="search-section text-3xl pt-8 text-stone-50">This is the Search-Gif Section</h1>
         <SearchGifs onClick={handleGifChange} onChange={(e) => handleGifChange(e)} />
         <br></br>
-        <PopUpTester gifs={gifSearch} />
+        
         <GifList gifs={gifSearch} />
        
         {/* <PopUpTester image={gifSearch} /> */}

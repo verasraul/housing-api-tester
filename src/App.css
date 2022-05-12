@@ -1,4 +1,6 @@
-
+html{
+  background-color:gray
+}
 
 .links {
   display: flex;
@@ -65,9 +67,9 @@ button:active {
 .search-section{
   padding: 1%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* border: 1px solid white; */
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+
 }
 label {
   margin-left: 30%;
@@ -230,7 +232,7 @@ label {
   flex-wrap: wrap;
   margin: auto;
   width: 100%;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 .posts .item {
   position: relative;
@@ -248,13 +250,13 @@ label {
   flex-basis: 18em;
   background-size: cover;
   color: #f8f8f8;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 }
 .posts .item img {
   height: 100%;
   border-radius: 2px;
 }
-.modal {
+/* .modal {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -269,7 +271,7 @@ label {
   height: 100%;
   text-align: center;
   border-radius: 0 0 4px 4px;
-}
+} */
 .modal button {
   margin-bottom: 1em;
 }

@@ -9,7 +9,7 @@ const Home = (props) => {
   return (
     <div className="home">
       <div>
-        <h1>
+        <h1 className='text-4xl text-stone-50'>
           Welcome to the Blog
         </h1>
       </div>

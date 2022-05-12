@@ -1,7 +1,26 @@
+import { Box, Button, Modal } from "@mui/material";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
 
 
 const PopUpTester = (props) => {
+  //open
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
 //   console.log(props);
 
   const {image_id} = useParams();
@@ -25,29 +44,47 @@ console.log(getImgUrl)
 
 
   return (
+    <>
+ <div>
+      <Button onClick={handleOpen}>Open modal</Button>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          
+        { getImgUrl }
+         
+        </Box>
+      </Modal>
+    </div> 
+    </>
+
+
+
+
+
+
+
     
-    <div className="post">
+    // <div className="post">
     
-        <input type="checkbox" id="exit" />
-      <div className="hero">
-      <label for='exit'><span class="close">&times;</span></label>
+    //     <input type="checkbox" id="exit" />
+    //   <div className="hero">
+    //   <label for='exit'><span class="close">&times;</span></label>
+       
+     
+    //   
       
-        
-      {/* <h1>POP-UP TESTER!!!</h1> */}
-        {/* { image_id.image_id } */}
-      {/* {image_id.gifys.images.downsized_medium.url} */}
-      { getImgUrl }
-      {/* {getImgUrl} */}
-          {/* {matchById()} */}
-      </div>
+    //   </div>
 
-      {/* <div className="content">
-        <h3>{post.title}</h3>
-        <p>{post.body}</p>
-      </div> */}
+     
 
-    </div>
+    // </div>
   );
 };
 
 export default PopUpTester;
+
