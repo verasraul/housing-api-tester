@@ -1,3 +1,4 @@
+import React from 'react';
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Modal, styled } from '@mui/material';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -83,7 +84,7 @@ const getImgUrl = props.gifs.map((item) => {
       <div className="posts ">
           { props.gifs.map((image) => {
             return (
-              <StyledCard className="border-4 border-amber-500" >
+              <StyledCard  className="border-4 border-amber-500">
                 <CardMedia
                   component="img"
                   height="20%"

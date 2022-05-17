@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from "react";
 import SearchGifs from "./SearchGifs";
 import GifList from "./GifList";

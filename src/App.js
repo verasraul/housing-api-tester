@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
@@ -20,7 +21,7 @@ function App() {
       <>
       <AppBar position='sticky' sx={{index:0}}>
      
-      <StyledToolbar className='bg-amber-600'>
+      <StyledToolbar className="bg-amber-600">
        
         {/* 'NavLink' links your pages. */}
         <nav>

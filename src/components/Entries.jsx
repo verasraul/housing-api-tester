@@ -1,3 +1,4 @@
+import React from 'react';
 import { Avatar, Box, Typography } from "@mui/material";
 import { useState } from "react";
 import { HuePicker } from "react-color";

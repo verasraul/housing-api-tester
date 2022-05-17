@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import RandomGif from "./GetRandom";
 import { Constants } from "../services/Constants";
 
@@ -7,8 +7,9 @@ const Home = (props) => {
 
 
   return (
-    <>
+    
     <div className="home">
+      
       <div>
         <h1 className='text-4xl text-stone-50'>
           Welcome to the Blog
@@ -29,7 +30,7 @@ const Home = (props) => {
         </div>
       </section>
     </div>
-    </>
+    
   );
 };
 
