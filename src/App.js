@@ -55,7 +55,9 @@ function App() {
       // Route' in singular form is a self-closing tag.
           <Route path='/' element={<Home />} />
 
-            <Route path=':image_id' element={<PopUpTester />} /> </Route>
+          <Route path='search' element={<SearchResults />}>
+
+<Route path=':image_id' element={<PopUpTester />} /> </Route>
 
             <Route path='entries' element={<Entries />} />
 
