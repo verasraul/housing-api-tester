@@ -25,8 +25,6 @@ export default function RandomGif(){
           <div onMouseLeave= { fetchData }>
           <img src={ gifs } />
           <br></br>
-      
-
           {/* <button onClick= {fetchData}>
             Generate Gif
           </button> */}
