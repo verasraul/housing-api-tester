@@ -1,9 +1,9 @@
+import React from 'react';
 import { useEffect, useState } from "react";
 import SearchGifs from "./SearchGifs";
 import GifList from "./GifList";
 import { Search } from "../services/Constants";
 import PopUpTester from "./PopUpTester";
-
 
 
 
@@ -52,11 +52,12 @@ export default function SearchResults(props){
 
     
     return (
+      // <Search> <InputBase placeholder="search" />    </Search>
         <div>
-          <h1 className="search-section">This is the Search-Gif Section</h1>
+          <h1 className="search-section text-3xl pt-8 text-stone-50">This is the Search-Gif Section</h1>
         <SearchGifs onClick={handleGifChange} onChange={(e) => handleGifChange(e)} />
         <br></br>
-        <PopUpTester gifs={gifSearch} />
+        
         <GifList gifs={gifSearch} />
        
         {/* <PopUpTester image={gifSearch} /> */}
