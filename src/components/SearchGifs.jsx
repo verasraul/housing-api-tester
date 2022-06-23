@@ -22,7 +22,7 @@ return (
     {/* border-4 border-indigo-500/100  */}
         {/* <StyledToolbar> */}
         
-        <Toolbar className='col-start-2 justify-self-center self-center ' variant="h6" sx={{display:{xs:"none",sm:"block"}}}> Search for GIFs </Toolbar>
+        <Toolbar className='col-start-2 justify-self-center self-center ' variant="h6" sx={{display:{xs:"none",sm:"block"}}}> Search for Listings </Toolbar>
            
         <TextField placeholder="Search" variant='filled' className="w-full row-start-2 col-start-2 bg-amber-600 rounded-lg text-lg" value={props.value} onChange={props.onChange} />
            

@@ -88,7 +88,7 @@ export default function SearchResults(){
     return (
       // <Search> <InputBase placeholder="search" />    </Search>
         <div>
-          <h1 className="search-section text-3xl pt-8 text-stone-50">This is the Search-Gif Section</h1>
+          <h1 className="search-section text-3xl pt-8 text-stone-50">Search for your dream home</h1>
         <SearchGifs onClick={handleGifChange} onChange={(e) => handleGifChange(e)} />
         <br></br>
         

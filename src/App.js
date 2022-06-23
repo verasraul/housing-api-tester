@@ -36,13 +36,13 @@ function App() {
         
           <NavLink to={"search"} style={{ textDecoration: "none" }}>
             <ListItemButton className="py-4"  sx={{color:'white'}}  variant="text" size="large" >  
-              <ListItemText primary="Search Giphy" />
+              <ListItemText primary="View Listings" />
             </ListItemButton> 
           </NavLink>
 
           <NavLink to={"entries"} style={{ textDecoration: "none" }}>
             <ListItemButton className="py-4"  sx={{color:'white'}}  variant="text" size="large" >  
-              <ListItemText primary="Entries" />
+              {/* <ListItemText primary="Entries" /> */}
             </ListItemButton> 
           </NavLink>
           </ButtonGroup>
@@ -60,7 +60,7 @@ function App() {
 
 <Route path=':image_id' element={<PopUpTester />} /> </Route>
 
-            <Route path='entries' element={<Entries />} />
+            {/* <Route path='entries' element={<Entries />} /> */}
 
           <Route path='*' element={<NoMatch />} />
           <Route path='/singleshowing/:id' element={<Singlehousing />} />
