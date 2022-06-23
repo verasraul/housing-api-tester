@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 // import RandomGif  from './GetRandom';
 import { options } from '../services/Constants';
+import Cardaction from './Cardaction';
 
 const StyledCardContent = styled(CardContent)({
   display: "flex",
@@ -81,23 +82,14 @@ const getImgUrl = props.gifs.map((item) => {
 
     return (
       // <div className="inner"> 
-      <div className="posts ">
+      <div className="posts flex gap-5 pb-10">
           { props.gifs.map((image) => {
             return (
-              <StyledCard  className="border-4 border-amber-500">
-                <CardMedia
-                  component="img"
-                  height="20%"
-                  image={image.coverPhoto.url}
-                  alt="Paella dish"
-                  
-                />
-                <StyledCardContent>
-                <CardActions disableSpacing sx={{display:'flex',justifyContent:"center"}}>
-                   <Button className="bg-sky-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" variant="contained"  onClick={() => handleOpen(image)}> info </Button>
-                  </CardActions>
-                </StyledCardContent>
-              </StyledCard>
+            
+              <Cardaction image={image.coverPhoto.url} id={image.externalID} loading={props.loading} title={image.title} />
+              
+            
+              
               )}
               
           )}
@@ -132,3 +124,20 @@ const getImgUrl = props.gifs.map((item) => {
 //   </IconButton>
  
 // </CardActions>
+
+
+  // {/* <StyledCard  className="border-4 border-amber-500">
+  //               <CardMedia
+  //                 component="img"
+  //                 height="20%"
+  //                 image={image.coverPhoto.url}
+  //                 alt="Paella dish"
+                  
+  //               />
+  //               <StyledCardContent>
+  //               <CardActions disableSpacing sx={{display:'flex',justifyContent:"center"}}>
+  //                  <Button className="bg-sky-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300" variant="contained"  onClick={() => handleOpen(image)}> info </Button>
+  //                 </CardActions>
+  //               </StyledCardContent>
+  //             </StyledCard> */}
+
