@@ -11,31 +11,15 @@ export default function SearchResults(){
     // inittialize the image list to the full list passed in props
     const [gifSearch, setGifSearch] = useState([])
     const [listSearch, setListSearch] = useState([])
+    const [isLoading,setIsLoading] = useState(true)
     
-    const fetchData = async (searchterm) => {
-      const listing = {
-        method: 'GET',
-        url: 'https://bayut.p.rapidapi.com/auto-complete',
-        params: {query: `${searchterm}`, hitsPerPage: '25', page: '0', lang: 'en'},
-        headers: {
-          'X-RapidAPI-Key': '6025a43a6bmsh19c4725651ec4dep11669cjsndf253647f9a8',
-          'X-RapidAPI-Host': 'bayut.p.rapidapi.com'
-        }
-      };
-
-      axios.request(listing).then(function (response) {
-        // console.log(response.data.hits);
-        setListSearch(`${response.data.hits}`)
-      }).catch(function (error) {
-        console.error(error);
-      });
-
-      function getHitImg(imageID){
+    const fetchData = async () => {
+          
       const options = {
         method: 'GET',
         url: 'https://bayut.p.rapidapi.com/properties/list',
         params: {
-          locationExternalIDs: `${imageID}`,
+          locationExternalIDs: `5002,6020`,
           purpose: 'for-rent',
           // hitsPerPage: '25',
           page: '0',
@@ -44,17 +28,20 @@ export default function SearchResults(){
           rentFrequency: 'monthly',
           categoryExternalID: '4'
         },
-        // headers: {
-        //   'X-RapidAPI-Key': '6025a43a6bmsh19c4725651ec4dep11669cjsndf253647f9a8',
-        //   'X-RapidAPI-Host': 'bayut.p.rapidapi.com'
-        // }
+        headers: {
+             'X-RapidAPI-Key': '5f2077a9f4msh069cb47279f5cc6p1c12a0jsn6443999e8964',
+             'X-RapidAPI-Host': 'bayut.p.rapidapi.com'
+        
       }};
-      // axios.request(getHitImg.options).then(function (response) {
-      //   console.log(response.data.hits);
-      //   setGifSearch(response.data.hits);
-      // }).catch(function (error) {
-      //   console.error(error);
-      // });
+      axios.request(options).then(function (response) {
+        console.log(response.data.hits);
+        setGifSearch(response.data.hits);
+      }).then(setTimeout(() => {
+        setIsLoading(false)
+      }, 3000))
+      .catch(function (error) {
+        console.error(error);
+      });
       
         // try {
           // const response = await options();
@@ -105,7 +92,7 @@ export default function SearchResults(){
         <SearchGifs onClick={handleGifChange} onChange={(e) => handleGifChange(e)} />
         <br></br>
         
-        <GifList gifs={gifSearch} />
+        <GifList gifs={gifSearch} loading={isLoading}/>
        
         {/* <PopUpTester image={gifSearch} /> */}
         </div>

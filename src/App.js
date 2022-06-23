@@ -7,6 +7,7 @@ import PopUpTester from './components/PopUpTester';
 import NoMatch from './components/NoMatch';
 import { AppBar, Box, Button, ButtonGroup, ListItemButton, ListItemText, styled, Toolbar, Typography } from '@mui/material';
 import Entries from './components/Entries';
+import Singlehousing from './components/Singlehousing'
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -62,6 +63,8 @@ function App() {
             <Route path='entries' element={<Entries />} />
 
           <Route path='*' element={<NoMatch />} />
+          <Route path='/singleshowing/:id' element={<Singlehousing />} />
+          
 
         </Routes>
 
