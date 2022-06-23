@@ -3,7 +3,7 @@ import { Box, Button, Card, CardActions, CardContent, CardMedia, Modal, styled }
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 // import RandomGif  from './GetRandom';
-import { Constants } from '../services/Constants';
+import { options } from '../services/Constants';
 
 const StyledCardContent = styled(CardContent)({
   display: "flex",
@@ -69,7 +69,7 @@ const getImgUrl = props.gifs.map((item) => {
     console.log('paramsIdID=', image_id)
     // console.log('item.images=', item.images.downsized_medium.url)
     return (
-      <img className='border-4 border-black' src={item.images.downsized_medium.url} />
+      <img className='border-4 border-black' src={item.hits.coverPhoto.url} />
     )
   }
 })
@@ -88,7 +88,7 @@ const getImgUrl = props.gifs.map((item) => {
                 <CardMedia
                   component="img"
                   height="20%"
-                  image={image.images.downsized_medium.url}
+                  image={image.coverPhoto.url}
                   alt="Paella dish"
                   
                 />
