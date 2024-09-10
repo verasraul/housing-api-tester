@@ -9,8 +9,18 @@ const Home = (props) => {
 
 
   return (
-    
-    <div className="home">
+    <div className="home" style={{
+      position: 'fixed', 
+      top:'0',
+      right:'0',
+      left:'0',
+      bottom:'0',
+      overflow: 'auto',  
+      flexDirection: 'row',
+      backgroundImage:' url("https://i.postimg.cc/j56V0DYm/Rectangle-Back-Ground.webp")',
+      backgroundSize:'cover'
+    }}>
+     
       
       <div>
         <h1 className='text-4xl text-stone-50'>
@@ -21,8 +31,8 @@ const Home = (props) => {
         <div className="inner">
           <div className="front">
             <img
-              // src="../../"
-              src="https://images.unsplash.com/photo-1536060316316-2466bda904f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
+              src="https://i.postimg.cc/sX5Mk4Xz/house-Icon.webp"
+              // src="https://images.unsplash.com/photo-1536060316316-2466bda904f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
               alt="You got this"
             />
           </div>

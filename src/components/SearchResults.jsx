@@ -87,7 +87,17 @@ export default function SearchResults(){
     
     return (
       // <Search> <InputBase placeholder="search" />    </Search>
-        <div>
+        <div style={{
+          position: 'fixed', 
+          top:'0',
+          right:'0',
+          left:'0',
+          bottom:'0',
+          overflow: 'auto',  
+          flexDirection: 'row',
+          backgroundImage:' url("https://i.postimg.cc/j56V0DYm/Rectangle-Back-Ground.webp")',
+          backgroundSize:'cover'
+        }}>
           <h1 className="search-section text-3xl pt-8 text-stone-50">Search for your dream home</h1>
         <SearchGifs onClick={handleGifChange} onChange={(e) => handleGifChange(e)} />
         <br></br>
